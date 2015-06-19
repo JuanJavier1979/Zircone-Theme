@@ -106,7 +106,7 @@ function zircone_scripts() {
 	wp_enqueue_style( 'foundation', get_stylesheet_directory_uri() . '/css/foundation.css' );
 	wp_enqueue_style( 'zircone-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '5', true );
-	wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/vendor/modernizr.js', array( 'jquery' ), '5', true );
+	wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array( 'jquery' ), '5', true );
 	
 	/* Add Pushy Sidebar Ofcanvas */
 	wp_enqueue_script( 'pushy-js', get_template_directory_uri() . '/js/pushy.min.js', array( 'jquery' ), '', true );
@@ -115,10 +115,6 @@ function zircone_scripts() {
 	wp_enqueue_style( 'zircone-genericons', get_stylesheet_directory_uri() . '/css/genericons.css', '', '2' );
 	wp_enqueue_style( 'zircone-lato-style', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic', '', '2' );
 	wp_enqueue_style( 'zircone-playfair-style', 'http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic', '', '2' );
-
-	/* Add Video Support */
-	//wp_enqueue_style( 'zircone-video-style', get_stylesheet_directory_uri() . '/css/video-js.css' );
-	//wp_enqueue_script( 'zircone-video-js', get_template_directory_uri() . '/js/video.js', array( 'jquery' ), '5', true );
 
 	wp_enqueue_script( 'zircone-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -139,11 +135,6 @@ function foundation_footer(){
 	<?php
 }
 add_filter('wp_footer','foundation_footer');
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
