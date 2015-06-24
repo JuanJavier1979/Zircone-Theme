@@ -88,6 +88,7 @@ function zircone_custom_style_output() {
 	      	<?php zircone_custom_style('body a', 'color', 'accent_color'); ?>
 	      	<?php zircone_custom_style('.site-title a:hover', 'color', 'accent_color'); ?>
 	      	<?php zircone_custom_style('#main-menu a:hover, .menu-btn:hover', 'color', 'accent_color'); ?>
+	      	<?php zircone_custom_style('#main-menu li.has-dropdown:hover > a, #main-menu ul ul li.menu-item-has-children:hover > a', 'color', 'accent_color'); ?>
 	      	<?php zircone_custom_style('.entry-title a:hover', 'color', 'accent_color'); ?>
 	      	<?php zircone_custom_style('input[type="submit"]', 'background-color', 'accent_color'); ?>
 	      	<?php zircone_custom_style('.pushy a:hover', 'background-color', 'accent_color'); ?>
