@@ -719,6 +719,7 @@ a:active {
 }
 #main-menu ul ul li a {
 	display: inline-block;
+	width: 100%;
 }
 #main-menu ul ul ul {
     position: absolute;
