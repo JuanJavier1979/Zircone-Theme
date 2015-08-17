@@ -41,8 +41,9 @@
 			$('input[type="submit"]').css('background-color', newval );
 			$('.pushy a:hover').css('background-color', newval );
 			$('section.page-title h1::after').css('background-color', newval );
-			$('button').css('background-color', newval );;
+			$('button').css('background-color', newval );
 			$('.button').css('background-color', newval );
+			$('.pushy-active .site-overlay').css('background-color', newval );
 		} );
 	} );
 } )( jQuery );

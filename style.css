@@ -4,7 +4,7 @@ Theme URI: http://www.iris-studio.es/themes/zircone
 Author: jjmrestituto
 Author URI: http://www.iris-studio.es
 Description: A simple, lightweight & clean WordPress theme. Zircone is fully responsive based on Foundation CSS Framework.
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: zircone
@@ -730,6 +730,55 @@ a:active {
     padding-left: 10px;
 }
 
+/* Social Menu */
+#zircone-social-menu {
+  list-style-type: none;
+  text-align: center;
+}
+#zircone-social-menu li {
+	display: inline-block;
+}
+#zircone-social-menu li a{
+  margin-right: 10px;
+}
+#zircone-social-menu li a::before {
+  top: 3px;
+  position: relative;
+  margin-right: 5px;
+}
+#zircone-social-menu li a[href*="twitter.com"]::before {
+	font-family: "Genericons";
+	content: "\f202";
+}
+#zircone-social-menu li a[href*="facebook.com"]::before {
+	font-family: "Genericons";
+	content: "\f204";
+}
+#zircone-social-menu li a[href*="linkedin.com"]::before {
+	font-family: "Genericons";
+	content: "\f207";
+}
+#zircone-social-menu li a[href*="google.com"]::before {
+	font-family: "Genericons";
+	content: "\f206";
+}
+#zircone-social-menu li a[href*="pinterest.com"]::before {
+	font-family: "Genericons";
+	content: "\f209";
+}
+#zircone-social-menu li a[href*="instagram.com"]::before {
+	font-family: "Genericons";
+	content: "\f215";
+}
+#zircone-social-menu li a[href*="skype.com"]::before {
+	font-family: "Genericons";
+	content: "\f220";
+}
+#zircone-social-menu li a[href*="github.com"]::before {
+	font-family: "Genericons";
+	content: "\f200";
+}
+
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
@@ -1363,12 +1412,9 @@ nav.pushy.pushy-open {
     bottom: 0;
     left: 0;
     z-index: 9998;
-    background-color: rgba(255,255,255,0.8);
-    -webkit-animation: fade 500ms; 
-    -moz-animation: fade 500ms; 
-    -o-animation: fade 500ms;
-    animation: fade 500ms;
+    background-color: #3498db;
     cursor: pointer;
+    opacity: .5;
 }
 
 @keyframes fade{

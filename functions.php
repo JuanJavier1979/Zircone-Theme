@@ -51,6 +51,7 @@ function zircone_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'zircone' ),
+		'social' => __( 'Social Menu', 'zircone' ),
 	) );
 
 	/*

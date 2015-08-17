@@ -2,11 +2,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: zircone 1.0.4\n"
-"Report-Msgid-Bugs-To: http://www.iris-studio.es\contacto\n"
+"Project-Id-Version: zircone 1.0.5\n"
+"Report-Msgid-Bugs-To: http://www.iris-studio.escontacto\n"
 "POT-Creation-Date: 2015-01-06 02:24:02+00:00\n"
-"POT-Revision-Date: Sat Aug 01 2015 17:53:52 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Tue Aug 18 2015 00:22:07 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
 "Language-Team: Zircone <LL@li.org>\n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
@@ -92,29 +93,33 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: ../footer.php:16
+#: ../footer.php:21
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: ../footer.php:16
+#: ../footer.php:21
 #, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: ../footer.php:18
+#: ../footer.php:23
 #, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: ../footer.php:18
-msgid "http://www.wannathemes.com"
+#: ../footer.php:23
+msgid "http://www.iris-studio.es"
 msgstr ""
 
 #: ../functions.php:53 ../sidebar.php:15
 msgid "Primary Menu"
 msgstr ""
 
-#: ../functions.php:90
+#: ../functions.php:54
+msgid "Social Menu"
+msgstr ""
+
+#: ../functions.php:91
 msgid "Sidebar"
 msgstr ""
 

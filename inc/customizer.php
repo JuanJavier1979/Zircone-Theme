@@ -96,6 +96,7 @@ function zircone_custom_style_output() {
 	      	<?php zircone_custom_style('section.page-title h1::after', 'background-color', 'accent_color'); ?>
 	      	<?php zircone_custom_style('button', 'background-color', 'accent_color'); ?>
 	      	<?php zircone_custom_style('.button', 'background-color', 'accent_color'); ?>
+	      	<?php zircone_custom_style('.pushy-active .site-overlay', 'background-color', 'accent_color'); ?>
 	      </style> 
 
 	  <?php

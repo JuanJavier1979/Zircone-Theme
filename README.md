@@ -1,6 +1,6 @@
 Zircone
 ==============
-Version: 1.0.1
+Version: 1.0.5
 Author: jjmrestituto
 Author URI: http://www.iris-studio.es
 Tags: light, gray, white, one-column, custom-menu, featured-images, post-formats, theme-options, sticky-post, translation-ready, responsive-layout
@@ -43,6 +43,13 @@ Installation
 	2. Create your menu as always 😉
 	3. Attach it to Primary Menu Location
 
+	Footer Social Menu
+	==============
+	1. Go to Appearance / Menus
+	2. Create your menu as always
+	3. Attach it to Social Menu Location
+	4. Create custom links with URL linking to your social profile and text will be displayed as a link.
+
 	Widgets
 	==============
 	1. Go to Appearance / Widgets
@@ -51,5 +58,6 @@ Installation
 
 Changelog
 ==============
-1.0.3 - Initial release.
-
+1.0.4 - Initial release. (9-August-2015)
+1.0.5 - Added Background Accent Color to Sidebar Overlay (18-August-2015)
+		Added Footer Social Menu
