@@ -1,6 +1,6 @@
 Zircone
 ==============
-Version: 1.0.5
+Version: 1.0.6
 Author: jjmrestituto
 Author URI: http://www.iris-studio.es
 Tags: light, gray, white, one-column, custom-menu, featured-images, post-formats, theme-options, sticky-post, translation-ready, responsive-layout
@@ -35,7 +35,8 @@ Installation
 	1. Go to Appearance / Customize
 	2. Colors: You can change background color and accent color
 	3. Logo: You can upload your logo clicking in Select Image button
-	4. Background Image: You can set a background image. Click Select Image button and upload your image. After that, you can set background repeat mode, position and attachment
+	4. Background Image: You can set a background image. Click Select Image button and upload your image. After that, you can set background repeat mode, position and attachment.
+	5. Typography: You can change Headings font and Body fonts selecting fonts in the select box of each item.
 
 	Menus
 	==============
@@ -61,3 +62,6 @@ Changelog
 1.0.4 - Initial release. (9-August-2015)
 1.0.5 - Added Background Accent Color to Sidebar Overlay (18-August-2015)
 		Added Footer Social Menu
+1.0.6 - Added Typography Options (14-September-2015)
+      - Added Hooks
+      - Some Code Fixes

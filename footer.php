@@ -10,6 +10,8 @@
 
 	</div><!-- #content -->
 
+	<?php do_action( 'wanna_before_footer' ); ?>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<section class="row">
 			<div class="site-info large-12 columns">
@@ -24,6 +26,9 @@
 			</div><!-- .site-info -->
 		</section>
 	</footer><!-- #colophon -->
+
+	<?php do_action( 'wanna_after_footer' ); ?>
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

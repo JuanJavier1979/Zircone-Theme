@@ -23,6 +23,8 @@
 <div id="page" class="hfeed site container">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'zircone' ); ?></a>
 
+    <?php do_action( 'wanna_before_header' ); ?>
+
     <header id="masthead" class="site-header row" role="banner">
       <div class="site-branding large-4 medium-4 columns">
       
@@ -52,3 +54,5 @@
     </header>
 
 	<div id="content" class="site-content">
+
+    <?php do_action( 'wanna_before_content' ); ?>

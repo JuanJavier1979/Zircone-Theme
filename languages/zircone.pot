@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: zircone 1.0.5\n"
 "Report-Msgid-Bugs-To: http://www.iris-studio.escontacto\n"
 "POT-Creation-Date: 2015-01-06 02:24:02+00:00\n"
-"POT-Revision-Date: Tue Aug 18 2015 00:22:07 GMT+0200 (CEST)\n"
+"POT-Revision-Date: Mon Sep 14 2015 00:06:53 GMT+0200 (CEST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: Zircone <LL@li.org>\n"
@@ -37,6 +37,7 @@ msgstr ""
 
 #: ../comments.php:28
 #, php-format
+msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
@@ -93,25 +94,25 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: ../footer.php:21
+#: ../footer.php:23
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: ../footer.php:21
+#: ../footer.php:23
 #, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: ../footer.php:23
+#: ../footer.php:25
 #, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: ../footer.php:23
+#: ../footer.php:25
 msgid "http://www.iris-studio.es"
 msgstr ""
 
-#: ../functions.php:53 ../sidebar.php:15
+#: ../functions.php:53 ../sidebar.php:17
 msgid "Primary Menu"
 msgstr ""
 
@@ -132,7 +133,7 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: ../inc/customizer.php:19 ../inc/customizer.php:55
+#: ../inc/customizer.php:19 ../inc/customizer.php:60
 msgid "Logo"
 msgstr ""
 
@@ -140,8 +141,32 @@ msgstr ""
 msgid "Upload a logo to replace the default site name and description in the header"
 msgstr ""
 
-#: ../inc/customizer.php:37
+#: ../inc/customizer.php:24
+msgid "Typography"
+msgstr ""
+
+#: ../inc/customizer.php:26
+msgid "Change default typography settings"
+msgstr ""
+
+#: ../inc/customizer.php:42
 msgid "Accent Color"
+msgstr ""
+
+#: ../inc/customizer.php:164
+msgid "Headings Font"
+msgstr ""
+
+#: ../inc/customizer.php:165
+msgid "Select the font to be used in the headings for your site."
+msgstr ""
+
+#: ../inc/customizer.php:175
+msgid "Body Font"
+msgstr ""
+
+#: ../inc/customizer.php:176
+msgid "Select the font to be used in the body for your site."
 msgstr ""
 
 #: ../inc/extras.php:52
@@ -341,4 +366,22 @@ msgstr ""
 
 #: ../inc/template-tags.php:371
 msgid "Reply"
+msgstr ""
+
+#. Name of the theme
+msgid "Zircone"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "http://www.iris-studio.es/themes/zircone"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"A simple, lightweight &amp; clean WordPress theme. Zircone is fully "
+"responsive based on Foundation CSS Framework."
+msgstr ""
+
+#. Author of the theme
+msgid "jjmrestituto"
 msgstr ""

@@ -20,6 +20,11 @@ function zircone_customize_register( $wp_customize ) {
 	    'priority'    => 40,
 	    'description' => __('Upload a logo to replace the default site name and description in the header', 'zircone'),
 	) );
+	$wp_customize->add_section( 'zircone_typography_section' , array(
+	    'title'       => __( 'Typography', 'zircone' ),
+	    'priority'    => 45,
+	    'description' => __('Change default typography settings', 'zircone'),
+	) );
 
 	// Accent Setting
 	$wp_customize->add_setting( 'accent_color', 
@@ -57,6 +62,121 @@ function zircone_customize_register( $wp_customize ) {
 	    	'settings' => 'zircone_logo',
 		) 
 	) );
+
+	//Typography Options
+    $font_choices = 
+        array(
+			'Playfair Display:400,700,400italic' => 'Playfair Display',
+			'Lato:400,100,300,300italic,100italic,700,400italic,900,700italic,900italic' => 'Lato',
+			'Alegreya:400,400italic,700,700italic,900,900italic' => 'Alegreya',
+			'Arvo:400,400italic,700,700italic' => 'Arvo',
+			'Dancing Script:400,700' => 'Dancing Script',
+			'Abril Fatface:400' => 'Abril Fatface',
+			'Alice:400' => 'Alice',
+			'Allerta:400' => 'Allerta',
+			'Amatic SC:400,700' => 'Amatic SC',
+			'Fauna One:400' => 'Fauna One',
+			'Unica One:400' => 'Unica One',
+			'Bitter:400,400italic,700' => 'Bitter',
+			'Vollkorn:400,400italic,700,700italic' => 'Vollkorn',
+			'Rokkitt:400,700' => 'Rokkitt',
+			'Megrim:400' => 'Megrim',
+			'Grand Hotel:400' => 'Grand Hotel',
+			'Medula One:400' => 'Medula One',
+			'Abel:400' => 'Abel',
+			'Cantarell:400,400italic,700,700italic' => 'Cantarell',
+			'Cedarville Cursive:400' => 'Cedarville Cursive', 
+			'Coustard:400,900' => 'Coustard',
+			'Leckerli One:400' => 'Leckerli One',
+			'Josefin Sans:400,400italic,600,300italic,300,100italic,100,700italic,600italic,700' => 'Josefin Sans',
+			'Dosis:400,800,700,600,500,300,200' => 'Dosis',
+			'Droid Sans:400,700' => 'Droid Sans',
+            'Droid Serif:400,400italic,700,700italic' => 'Droid Serif',
+			'Roboto:400,100,100italic,300italic,300,400italic,500,500italic,700,700italic,900,900italic' => 'Roboto',
+			'Roboto Condensed:400,300,300italic,400italic,700,700italic' => 'Roboto Condensed',
+			'Roboto Slab:400,100,300,700' => 'Roboto Slab',
+			'Open Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' => 'Open Sans',
+			'Gentium Basic:400,400italic,700,700italic' => 'Gentium Basic',
+			'Ovo:400' => 'Ovo',
+			'Gloria Hallelujah:400' => 'Gloria Hallelujah',
+			'EB Garamond:400' => 'EB Garamond',
+			'Muli:400,300,300italic,400italic' => 'Muli',
+			'Neuton:400,200,300,400italic,700,800' => 'Neuton',
+			'Vast Shadow:400' => 'Vast Shadow',
+			'Oswald:400,300,700' => 'Oswald',
+			'Quattrocento:400,700' => 'Quattrocento',
+			'Fanwood Text:400,400italic' => 'Fanwood Text',
+			'Quando:400' => 'Quando',
+            'Judson:400,400italic,700' => 'Judson',
+			'Monserrat:400,700' => 'Monserrat',
+			'Exo:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' => 'Exo',
+            'Open Sans Condensed:300,300italic,700' => 'Open Sans Condensed',
+            'Alfa Slab One:400' => 'Alfa Slab One',
+            'Domine:400,700' => 'Domine',
+            'Lobster:400' => 'Lobster',
+            'Lobster Two:400,400italic,700,700italic' => 'Lobster Two',
+            'PT Sans:400,400italic,700,700italic' => 'PT Sans',
+            'PT Serif:400,400italic,700,700italic' => 'PT Serif',
+            'Noto Sans:400,400italic,700,700italic' => 'Noto Sans',
+            'Noto Serif:400,400italic,700,700italic' => 'Noto Serif',
+            'Lora:400,400italic,700,700italic' => 'Lora',
+			'Nixie One:400' => 'Nixie One',
+			'Libre Baskerville:400,400italic,700' => 'Libre Baskerville',
+			'Julius Sans One:400' => 'Julius Sans One', 
+            'Crimson Text:400,400italic,600,600italic,700,700italic' => 'Crimson Text',
+            'Almendra Display:400' => 'Almendra Display',
+			'Cardo:400,400italic,700' => 'Cardo',
+			'Philosopher:400,400italic,700,700italic' => 'Philosopher',
+			'Cinzel Decorative:400,700,900' => 'Cinzel Decorative',
+			'Amiri:400,400italic,700,700italic' => 'Amiri',
+			'Yeseva One:400' => 'Yeseva One',
+			'Gravitas One:400' => 'Gravitas One',
+            'Merriweather Sans:400,300,300italic,400italic,700,700italic,800,800italic' => 'Merriweather Sans',
+            'Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' => 'Merriweather',
+            'Raleway:400,100,200,500,600,300,700,800,900' => 'Raleway',
+            'Fjalla One:400' => 'Fjalla One',
+			'Karla:400,400italic,700,700italic' => 'Karla',
+			'Old Standard TT:400,400italic,700' => 'Old Standard TT',
+			'Ubuntu:400,300italic,300,400italic,500,700italic,700,500italic' => 'Ubuntu',
+			'Yanone Kaffeesatz:400,200,300,700' => 'Yanone Kaffeesatz',
+    	);
+
+	$wp_customize->add_setting( 
+		'zircone_headings_font',
+		array ( 
+		  'default' => 'Playfair Display:400,700,400italic',
+    	  'sanitize_callback' => 'zircone_sanitize_fonts'
+    	)
+	);
+	$wp_customize->add_setting( 
+		'zircone_body_font',
+		array ( 
+		  'default' => 'Lato:400,100,300,300italic,100italic,700,400italic,900,700italic,900italic',
+    	  'sanitize_callback' => 'zircone_sanitize_fonts'
+    	)
+	);
+	$wp_customize->add_control(
+		'zircone_headings_font',
+		array(
+			'settings'		=> 'zircone_headings_font',
+			'section'		=> 'zircone_typography_section',
+			'type'			=> 'select',
+			'label'			=> __( 'Headings Font', 'zircone' ),
+			'description'	=> __( 'Select the font to be used in the headings for your site.', 'zircone' ),
+			'choices'		=> $font_choices
+		)
+	);
+	$wp_customize->add_control(
+		'zircone_body_font',
+		array(
+			'settings'		=> 'zircone_body_font',
+			'section'		=> 'zircone_typography_section',
+			'type'			=> 'select',
+			'label'			=> __( 'Body Font', 'zircone' ),
+			'description'	=> __( 'Select the font to be used in the body for your site.', 'zircone' ),
+			'choices'		=> $font_choices
+		)
+	);
 }
 add_action( 'customize_register', 'zircone_customize_register' );
 
@@ -80,11 +200,26 @@ endif;
 
 if (!function_exists('zircone_custom_style_output')) :
 function zircone_custom_style_output() {
+	$zircone_headings_font = esc_html(get_theme_mod('zircone_headings_font')); 	
+	$zircone_body_font = esc_html(get_theme_mod('zircone_body_font'));	 
+	$zircone_fonts = "";
+
+	if ( $zircone_headings_font ) {
+		$font_pieces = explode(":", $zircone_headings_font);
+		$zircone_fonts .= "h1, h2, h3, h4, h5, h6, blockquote, q, .post-navigation .nav-previous span, .post-navigation .nav-next span, p.intro, h3.entry-title { font-family: {$font_pieces[0]}; }"."\n"; 
+	}
+
+	if ( $zircone_body_font ) {
+		$font_pieces = explode(":", $zircone_body_font);
+		$zircone_fonts .= "body, button, input, select, textarea, .site-title, .site-description { font-family: {$font_pieces[0]}; }"."\n";
+	}
+
       ?>
       
 	      <!-- Customizer CSS --> 
 	      
 	      <style type="text/css">
+	      	<?php echo $zircone_fonts; ?>
 	      	<?php zircone_custom_style('body a', 'color', 'accent_color'); ?>
 	      	<?php zircone_custom_style('.site-title a:hover', 'color', 'accent_color'); ?>
 	      	<?php zircone_custom_style('#main-menu a:hover, .menu-btn:hover', 'color', 'accent_color'); ?>
@@ -112,3 +247,88 @@ add_action( 'customize_preview_init' , 'zircone_live_preview' );
 function zircone_sanitize_text( $str ) {
 	return sanitize_text_field( $str );
 } 
+
+function zircone_sanitize_fonts( $str ) {
+	$choices = 
+        array(
+			'Playfair Display:400,700,400italic' => 'Playfair Display',
+			'Lato:400,100,300,300italic,100italic,700,400italic,900,700italic,900italic' => 'Lato',
+			'Alegreya:400,400italic,700,700italic,900,900italic' => 'Alegreya',
+			'Arvo:400,400italic,700,700italic' => 'Arvo',
+			'Dancing Script:400,700' => 'Dancing Script',
+			'Abril Fatface:400' => 'Abril Fatface',
+			'Alice:400' => 'Alice',
+			'Allerta:400' => 'Allerta',
+			'Amatic SC:400,700' => 'Amatic SC',
+			'Fauna One:400' => 'Fauna One',
+			'Unica One:400' => 'Unica One',
+			'Bitter:400,400italic,700' => 'Bitter',
+			'Vollkorn:400,400italic,700,700italic' => 'Vollkorn',
+			'Rokkitt:400,700' => 'Rokkitt',
+			'Megrim:400' => 'Megrim',
+			'Grand Hotel:400' => 'Grand Hotel',
+			'Medula One:400' => 'Medula One',
+			'Abel:400' => 'Abel',
+			'Cantarell:400,400italic,700,700italic' => 'Cantarell',
+			'Cedarville Cursive:400' => 'Cedarville Cursive', 
+			'Coustard:400,900' => 'Coustard',
+			'Leckerli One:400' => 'Leckerli One',
+			'Josefin Sans:400,400italic,600,300italic,300,100italic,100,700italic,600italic,700' => 'Josefin Sans',
+			'Dosis:400,800,700,600,500,300,200' => 'Dosis',
+			'Droid Sans:400,700' => 'Droid Sans',
+            'Droid Serif:400,400italic,700,700italic' => 'Droid Serif',
+			'Roboto:400,100,100italic,300italic,300,400italic,500,500italic,700,700italic,900,900italic' => 'Roboto',
+			'Roboto Condensed:400,300,300italic,400italic,700,700italic' => 'Roboto Condensed',
+			'Roboto Slab:400,100,300,700' => 'Roboto Slab',
+			'Open Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' => 'Open Sans',
+			'Gentium Basic:400,400italic,700,700italic' => 'Gentium Basic',
+			'Ovo:400' => 'Ovo',
+			'Gloria Hallelujah:400' => 'Gloria Hallelujah',
+			'EB Garamond:400' => 'EB Garamond',
+			'Muli:400,300,300italic,400italic' => 'Muli',
+			'Neuton:400,200,300,400italic,700,800' => 'Neuton',
+			'Vast Shadow:400' => 'Vast Shadow',
+			'Oswald:400,300,700' => 'Oswald',
+			'Quattrocento:400,700' => 'Quattrocento',
+			'Fanwood Text:400,400italic' => 'Fanwood Text',
+			'Quando:400' => 'Quando',
+            'Judson:400,400italic,700' => 'Judson',
+			'Monserrat:400,700' => 'Monserrat',
+			'Exo:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' => 'Exo',
+            'Open Sans Condensed:300,300italic,700' => 'Open Sans Condensed',
+            'Alfa Slab One:400' => 'Alfa Slab One',
+            'Domine:400,700' => 'Domine',
+            'Lobster:400' => 'Lobster',
+            'Lobster Two:400,400italic,700,700italic' => 'Lobster Two',
+            'PT Sans:400,400italic,700,700italic' => 'PT Sans',
+            'PT Serif:400,400italic,700,700italic' => 'PT Serif',
+            'Noto Sans:400,400italic,700,700italic' => 'Noto Sans',
+            'Noto Serif:400,400italic,700,700italic' => 'Noto Serif',
+            'Lora:400,400italic,700,700italic' => 'Lora',
+			'Nixie One:400' => 'Nixie One',
+			'Libre Baskerville:400,400italic,700' => 'Libre Baskerville',
+			'Julius Sans One:400' => 'Julius Sans One', 
+            'Crimson Text:400,400italic,600,600italic,700,700italic' => 'Crimson Text',
+            'Almendra Display:400' => 'Almendra Display',
+			'Cardo:400,400italic,700' => 'Cardo',
+			'Philosopher:400,400italic,700,700italic' => 'Philosopher',
+			'Cinzel Decorative:400,700,900' => 'Cinzel Decorative',
+			'Amiri:400,400italic,700,700italic' => 'Amiri',
+			'Yeseva One:400' => 'Yeseva One',
+			'Gravitas One:400' => 'Gravitas One',
+            'Merriweather Sans:400,300,300italic,400italic,700,700italic,800,800italic' => 'Merriweather Sans',
+            'Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' => 'Merriweather',
+            'Raleway:400,100,200,500,600,300,700,800,900' => 'Raleway',
+            'Fjalla One:400' => 'Fjalla One',
+			'Karla:400,400italic,700,700italic' => 'Karla',
+			'Old Standard TT:400,400italic,700' => 'Old Standard TT',
+			'Ubuntu:400,300italic,300,400italic,500,700italic,700,500italic' => 'Ubuntu',
+			'Yanone Kaffeesatz:400,200,300,700' => 'Yanone Kaffeesatz',
+    	);
+
+    if ( array_key_exists( $str, $choices ) ) {
+        return $str;
+    } else {
+        return '';
+    }
+}

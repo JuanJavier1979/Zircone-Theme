@@ -114,8 +114,19 @@ function zircone_scripts() {
 
 	/* Add Fonts */
 	wp_enqueue_style( 'zircone-genericons', get_stylesheet_directory_uri() . '/css/genericons.css', '', '2' );
-	wp_enqueue_style( 'zircone-lato-style', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic', '', '2' );
-	wp_enqueue_style( 'zircone-playfair-style', 'http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic', '', '2' );
+	
+	$zircone_headings_font = esc_html(get_theme_mod('zircone_headings_font'));
+	$zircone_body_font = esc_html(get_theme_mod('zircone_body_font'));
+	if( $zircone_headings_font ) {
+		wp_enqueue_style( 'zircone-headings-font', '//fonts.googleapis.com/css?family='. $zircone_headings_font );	
+	} else {
+		wp_enqueue_style( 'zircone-playfair-style', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic', '', '2' );  
+	}	
+	if( $zircone_body_font ) {
+		wp_enqueue_style( 'zircone-body-font', '//fonts.googleapis.com/css?family='. $zircone_body_font );	
+	} else {
+		wp_enqueue_style( 'zircone-lato-style', '//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic', '', '2' );
+	}
 
 	wp_enqueue_script( 'zircone-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

@@ -13,26 +13,17 @@
 
 get_header(); ?>
 
-    <!--<section class="page-title row text-center">
-      <article class="large-8 large-centered columns">
-        <header>
-          <h1>
-            This is the Blog Page
-          </h1>
-        </header>
-
-        <div class="page-tagline">
-          <p>Sed finibus purus sit amet ligula ornare, volutpat fringilla dui vulputate. Morbi semper auctor turpis quis facilisis. Donec ullamcorper a arcu elementum lobortis. In malesuada risus sit amet libero blandit, id porttitor ante cursus.</p>
-        </div>
-      </article>
-    </section>-->
-
 	<div id="primary" class="content-area row">
 		<main id="main" class="site-main large-8 large-centered columns" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php /* Start the Loop */ ?>
+			<?php /* Start the Loop */
+			
+			do_action( 'wanna_loop_before' ); 
+
+			?>
+			
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
@@ -43,7 +34,11 @@ get_header(); ?>
 					get_template_part( 'content', get_post_format() );
 				?>
 
-			<?php endwhile; ?>
+			<?php endwhile; 
+
+			do_action( 'wanna_loop_after' ); 
+
+			?>
 
 			<?php the_posts_navigation(); ?>
 
@@ -56,5 +51,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php // get_sidebar(); ?>
 <?php get_footer(); ?>

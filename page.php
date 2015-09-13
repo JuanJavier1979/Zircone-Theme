@@ -23,7 +23,15 @@ get_header(); ?>
 	<div id="primary" class="content-area row">
 		<main id="main" class="site-main large-8 large-centered columns" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php 
+
+			do_action( 'wanna_loop_page_before' );
+
+			while ( have_posts() ) : the_post(); 
+
+				do_action( 'wanna_page_before' );
+
+			?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 
@@ -34,10 +42,17 @@ get_header(); ?>
 					endif;
 				?>
 
-			<?php endwhile; // end of the loop. ?>
+			<?php 
+
+				do_action( 'wanna_page_after' );
+
+			endwhile; // end of the loop. 
+
+			do_action( 'wanna_loop_page_after' );
+			
+			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php // get_sidebar(); ?>
 <?php get_footer(); ?>

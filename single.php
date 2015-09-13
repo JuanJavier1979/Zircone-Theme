@@ -20,7 +20,13 @@ get_header(); ?>
 	<div id="primary" class="content-area row">
 		<main id="main" class="site-main large-8 large-centered columns" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php 
+
+		while ( have_posts() ) : the_post(); 
+
+			do_action( 'wanna_single_post_before' );
+
+		?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
 
@@ -33,7 +39,13 @@ get_header(); ?>
 				endif;
 			?>
 
-		<?php endwhile; // end of the loop. ?>
+		<?php 
+
+			do_action( 'wanna_single_post_after' );
+
+		endwhile; // end of the loop. 
+
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
