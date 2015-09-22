@@ -4,7 +4,7 @@ Theme URI: http://www.iris-studio.es/themes/zircone
 Author: jjmrestituto
 Author URI: http://www.iris-studio.es
 Description: A simple, lightweight & clean WordPress theme. Zircone is fully responsive based on Foundation CSS Framework.
-Version: 1.0.6
+Version: 1.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: zircone
@@ -746,6 +746,10 @@ a:active {
   position: relative;
   margin-right: 5px;
 }
+#zircone-social-menu li a[href*="dribbble.com"]::before {
+	font-family: "Genericons";
+	content: "\f201";
+}
 #zircone-social-menu li a[href*="twitter.com"]::before {
 	font-family: "Genericons";
 	content: "\f202";
@@ -753,6 +757,14 @@ a:active {
 #zircone-social-menu li a[href*="facebook.com"]::before {
 	font-family: "Genericons";
 	content: "\f204";
+}
+#zircone-social-menu li a[href*="wordpress.com"]::before {
+	font-family: "Genericons";
+	content: "\f205";
+}
+#zircone-social-menu li a[href*="wordpress.org"]::before {
+	font-family: "Genericons";
+	content: "\f205";
 }
 #zircone-social-menu li a[href*="linkedin.com"]::before {
 	font-family: "Genericons";
@@ -766,9 +778,37 @@ a:active {
 	font-family: "Genericons";
 	content: "\f209";
 }
+#zircone-social-menu li a[href*="flickr.com"]::before {
+	font-family: "Genericons";
+	content: "\f210";
+}
+#zircone-social-menu li a[href*="vimeo.com"]::before {
+	font-family: "Genericons";
+	content: "\f212";
+}
+#zircone-social-menu li a[href*="youtube.com"]::before {
+	font-family: "Genericons";
+	content: "\f213";
+}
+#zircone-social-menu li a[href*="tumblr.com"]::before {
+	font-family: "Genericons";
+	content: "\f214";
+}
 #zircone-social-menu li a[href*="instagram.com"]::before {
 	font-family: "Genericons";
 	content: "\f215";
+}
+#zircone-social-menu li a[href*="codepen.io"]::before {
+	font-family: "Genericons";
+	content: "\f216";
+}
+#zircone-social-menu li a[href*="polldaddy.com"]::before {
+	font-family: "Genericons";
+	content: "\f217";
+}
+#zircone-social-menu li a[href*="path.com"]::before {
+	font-family: "Genericons";
+	content: "\f219";
 }
 #zircone-social-menu li a[href*="skype.com"]::before {
 	font-family: "Genericons";
@@ -777,6 +817,30 @@ a:active {
 #zircone-social-menu li a[href*="github.com"]::before {
 	font-family: "Genericons";
 	content: "\f200";
+}
+#zircone-social-menu li a[href*="digg.com"]::before {
+	font-family: "Genericons";
+	content: "\f221";
+}
+#zircone-social-menu li a[href*="reddit.com"]::before {
+	font-family: "Genericons";
+	content: "\f222";
+}
+#zircone-social-menu li a[href*="stumbleupon.com"]::before {
+	font-family: "Genericons";
+	content: "\f223";
+}
+#zircone-social-menu li a[href*="getpocket.com"]::before {
+	font-family: "Genericons";
+	content: "\f224";
+}
+#zircone-social-menu li a[href*="dropbox.com"]::before {
+	font-family: "Genericons";
+	content: "\f225";
+}
+#zircone-social-menu li a[href*="foursquare.com"]::before {
+	font-family: "Genericons";
+	content: "\f226";
 }
 
 /*--------------------------------------------------------------
