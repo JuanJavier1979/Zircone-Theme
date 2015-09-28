@@ -104,7 +104,7 @@ add_action( 'widgets_init', 'zircone_widgets_init' );
  */
 function zircone_scripts() {
 	/* Add Foundation CSS */
-	wp_enqueue_style( 'foundation', get_stylesheet_directory_uri() . '/css/foundation.css' );
+	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.css' );
 	wp_enqueue_style( 'zircone-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '5', true );
 	wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array( 'jquery' ), '5', true );
@@ -113,7 +113,7 @@ function zircone_scripts() {
 	wp_enqueue_script( 'pushy-js', get_template_directory_uri() . '/js/pushy.min.js', array( 'jquery' ), '', true );
 
 	/* Add Fonts */
-	wp_enqueue_style( 'zircone-genericons', get_stylesheet_directory_uri() . '/css/genericons.css', '', '2' );
+	wp_enqueue_style( 'zircone-genericons', get_template_directory_uri() . '/css/genericons.css', '', '2' );
 	
 	$zircone_headings_font = esc_html(get_theme_mod('zircone_headings_font'));
 	$zircone_body_font = esc_html(get_theme_mod('zircone_body_font'));

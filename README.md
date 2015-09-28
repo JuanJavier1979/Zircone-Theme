@@ -1,6 +1,6 @@
 Zircone
 ==============
-Version: 1.0.7
+Version: 1.0.8
 Author: jjmrestituto
 Author URI: http://www.iris-studio.es
 Tags: light, gray, white, one-column, custom-menu, featured-images, post-formats, theme-options, sticky-post, translation-ready, responsive-layout
@@ -67,3 +67,4 @@ Changelog
       - Some Code Fixes
 1.0.7 - Genericons 3.4 update (23-September-2015)
 	  - More Social Menu icons added
+1.0.8 - Child Theme Bug fixes (28-September-2015)
