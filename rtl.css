@@ -9,9 +9,234 @@ http://codex.wordpress.org/Right_to_Left_Language_Support
 
 */
 
-/*
+
 body {
 	direction: rtl;
 	unicode-bidi: embed;
 }
-*/
+
+#masthead .site-branding {
+	float: right;
+}
+#masthead .menu {
+	float: left;
+}
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+ul,
+ol {
+	margin: 0 1.5em 1.5em 0;
+}
+
+li > ul,
+li > ol {
+	margin-right: 1.5em;
+	margin-left: 0;
+}
+
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+textarea {
+	padding-right: 3px;
+	padding-left: 0;
+}
+
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	float: right;
+}
+
+.main-navigation ul {
+	padding-right: 0;
+	padding-left: auto;
+}
+
+.main-navigation li {
+	float: right;
+}
+.main-navigation ul ul {
+	float: right;
+	left: 0;
+	right: -999em;
+}
+
+.main-navigation ul ul ul {
+	left: 0;
+	right: -999em;
+}
+.main-navigation ul li:hover > ul {
+	right: auto;
+}
+
+.main-navigation ul ul li:hover > ul {
+	right: 100%;
+}
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: right;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: left;
+	text-align: left;
+}
+
+/* Main Menu */
+#main-menu ul {
+	text-align: left;
+}
+#main-menu li {
+	margin-left: 0;
+}
+#main-menu li:after {
+	content: none;
+	margin-left: 0;
+	margin-right: 0;
+}
+#main-menu li:before {
+	content: "·";
+	margin-right: 5px;
+	padding-left: 5px;
+}
+#main-menu ul ul li:before {
+	content: none !important;
+}
+.menu-btn {
+	float: left !important;
+	margin-right: 10px;
+	margin-left: 0;
+}
+
+#main-menu ul ul {
+    right: 0;
+    text-align: right;
+}
+#main-menu ul ul ul {
+	right: 100%;
+    padding-right: 10px;
+    padding-left: 0;
+}
+
+/* Social Menu */
+#zircone-social-menu li a{
+  margin-right: 0;
+  margin-left: 10px;
+}
+#zircone-social-menu li a::before {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	right: 5px;
+	left: 0;
+}
+
+/*--------------------------------------------------------------
+7.0 Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	float: right;
+	margin-right: 0;
+	margin-left: 1.5em;
+}
+
+.alignright {
+	float: left;
+	margin-left: 0;
+	margin-right: 1.5em;
+}
+
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
+.page-links a {
+    margin-left: 0;
+    margin-right: 10px;
+}
+.entry-meta,
+article .entry-footer,
+.comment-date {
+	margin-right: 0;
+	margin-left: auto;
+}
+	.entry-meta:last-child,
+	article .entry-footer:last-child {
+		margin-left: 0;
+		margin-right: auto;
+	}
+.entry-meta span,
+article .entry-footer span {
+	margin-left: 20px;
+	margin-right: 0;
+}
+	.entry-meta span:last-child,
+	article .entry-footer span:last-child {
+		margin-left: 0;
+		margin-right: auto;
+	}
+
+/*--------------------------------------------------------------
+10.2 Asides
+--------------------------------------------------------------*/
+.widget ul {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+/*--------------------------------------------------------------
+10.3 Comments
+--------------------------------------------------------------*/
+span.comment-edit {
+	margin-left: 0;
+	margin-right: 20px;
+}
+
+/* Comment List */
+ol.comment-list {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+/*--------------------------------------------------------------
+12.2 Galleries
+--------------------------------------------------------------*/
+.gallery-caption {
+	margin: 0 0 1.4em 1.4em;
+}
+
+/*--------------------------------------------------------------
+14 Pushy  v0.9.2 
+--------------------------------------------------------------*/
+/* Menu Appearance */
+.pushy {
+    right: auto;
+    left: 0;
+}
+nav.pushy.pushy-open {
+	box-shadow: 0 0 -80px rgba(0,0,0,.4);
+}
+body.pushy-active .menu-btn {
+	left: 320px;
+	right: auto;
+}	
+.pushy-left {
+    -webkit-transform: translate3d(-280px,0,0);
+    -moz-transform: translate3d(-280px,0,0);
+    -ms-transform: translate3d(-280px,0,0);
+    -o-transform: translate3d(-280px,0,0);
+    transform: translate3d(-280px,0,0);
+}

@@ -110,7 +110,11 @@ function zircone_scripts() {
 	wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array( 'jquery' ), '5', true );
 	
 	/* Add Pushy Sidebar Ofcanvas */
-	wp_enqueue_script( 'pushy-js', get_template_directory_uri() . '/js/pushy.min.js', array( 'jquery' ), '', true );
+	if( is_rtl() ) {
+		wp_enqueue_script( 'pushy-js', get_template_directory_uri() . '/js/pushy-left.min.js', array( 'jquery' ), '', true );
+	} else {
+		wp_enqueue_script( 'pushy-js', get_template_directory_uri() . '/js/pushy.min.js', array( 'jquery' ), '', true );
+	}
 
 	/* Add Fonts */
 	wp_enqueue_style( 'zircone-genericons', get_template_directory_uri() . '/css/genericons.css', '', '2' );
@@ -120,13 +124,13 @@ function zircone_scripts() {
 	if( $zircone_headings_font ) {
 		wp_enqueue_style( 'zircone-headings-font', '//fonts.googleapis.com/css?family='. $zircone_headings_font );	
 	} else {
-		wp_enqueue_style( 'zircone-playfair-style', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic', '', '2' );  
+		wp_enqueue_style( 'zircone-playfair-style', '//fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic&subset=latin,cyrillic,latin-ext', '', '2' );  
 	}	
 	if( $zircone_body_font ) {
 		wp_enqueue_style( 'zircone-body-font', '//fonts.googleapis.com/css?family='. $zircone_body_font );	
 	} else {
 		wp_enqueue_style( 'zircone-lato-style', '//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic', '', '2' );
-	}
+	}		
 
 	wp_enqueue_script( 'zircone-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -195,4 +199,3 @@ function TopBar_set_dropdown($sorted_menu_items, $args) {
 }
 endif;
 add_filter('wp_nav_menu_objects', 'TopBar_set_dropdown', 10, 2);
-

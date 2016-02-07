@@ -13,12 +13,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+<?php
+if ( is_rtl() ) {
+    $pushy_class = "pushy-left";
+} else {
+    $pushy_class = "pushy-right";
+}
+?>
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<nav class="pushy pushy-right"><?php get_sidebar(); ?></nav>
+<nav class="pushy <?php echo $pushy_class?>"><?php get_sidebar(); ?></nav>
 <div class="site-overlay"></div>
 <div id="page" class="hfeed site container">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'zircone' ); ?></a>
